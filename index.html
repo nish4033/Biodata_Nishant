@@ -19,6 +19,7 @@
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
   h1 {
     text-align: center;
@@ -35,11 +36,27 @@
     background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  .section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #007bff, #00bcd4);
+    z-index: -1;
+    transition: transform 0.5s ease;
+  }
+  .section:hover:before {
+    transform: translateX(150%);
   }
   .section-heading {
     font-size: 28px;
     font-weight: bold;
-    color: #007bff;
+    color: #fff;
     margin-bottom: 15px;
     text-transform: uppercase;
     padding-left: 10px;
@@ -107,21 +124,4 @@
       <p><strong>Grandfather's Occupation:</strong> Farmer</p>
       <p><strong>Father's Name:</strong> Karuna Kumar</p>
       <p><strong>Father's Occupation:</strong> Assistant @ Civil Court</p>
-      <p><strong>Mother's Name:</strong> Madhuri Devi</p>
-      <p><strong>Mother's Occupation:</strong> Homemaker</p>
-      <p><strong>Sibling:</strong> Sister - Sweta Ranjan (Senior Associate @ Aretha Legal)</p>
-      <p><strong>Uncle's Name:</strong> Rajeev Kumar</p>
-      <p><strong>Uncle's Occupation:</strong> Businessman</p>
-    </div>
-  </div>
-
-  <div class="section">
-    <div class="section-heading">Hobbies & Interests</div>
-    <div class="details">
-      <p>Travel, Sports</p>
-    </div>
-  </div>
-</div>
-
-</body>
-</html>
+      <p><strong
